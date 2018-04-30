@@ -1,0 +1,22 @@
+<!-- lookup.html -->
+{% extends "geoquery/base.html" %}
+
+{% block page_header %}Geopy Lookup{% endblock page_header %}
+
+{% block content %}
+<div class="row">
+    <div class="col">
+        <form action="." method="get"> 
+            {{ form.as_p }}
+            <input type="submit" value="Look it up"/>
+        </form>
+    </div>
+    <div class="col">
+        {% if result %}
+            <p class='lead'>{{ result }}</p>
+            <p>{{ result.latitude }}</p>
+            <p>{{ result.longitude }}</p>
+        {% endif %}        
+    </div>
+</div>
+{% endblock content %}

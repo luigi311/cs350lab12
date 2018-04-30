@@ -1,0 +1,4 @@
+Django==1.11.12
+geographiclib==1.49
+geopy==1.13.0
+pytz==2018.4
