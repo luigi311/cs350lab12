@@ -33,10 +33,12 @@ Lab 12: Using a Third Party App (Geopy)
 
 `help(loc)`
 
-** Try: **
+**Try:**
 
 `print loc.address`
+
 `print loc.latitude`
+
 `print loc.longitude`
 
 **Can we compute distance between to geographic locations (using geodisic measurement)? Sure!**
@@ -46,15 +48,19 @@ Lab 12: Using a Third Party App (Geopy)
 ** Location A **
 
 `q = '1314 chavez st, las vegas, nm'`
+
 `a = geolocator.geocode(q)`
 
 ** Location B**
 
 `q = '1009 diamond, las vegas, nm'`
+
 `b = geolocator.geocode(q)`
 
 `aloc = (a.latitude, a.longitude)`
+
 `bloc = (b.latitude, b.longitude)`
+
 `d = distance(aloc, bloc).miles`
 
 `print 'distance', d`
@@ -75,22 +81,24 @@ E.g., `http://localhost:8000`
 
 TODO: geoquery App
 ----
-### 1. Hook up with url located on the home page to go to the `lookup` url using the url template filter. 
+### 1. Hook up the url located on the home page to go to the `lookup` url using the url template filter. 
 
-#### a. Edit geopy/index.html
+#### a. Edit geoquery/templates/geoquery/index.html
 
 ### 2. Try out the form. No results? Let's use geopy to perform a lookup when a query is submitted through the form.
 
 #### a. Open geoquery/views.py
 #### b. Add a geopy lookup to the `get_context_data` override.
-#### c. Create a template variable to the result of the query.
+#### c. Add a template variable to show the result of the query.
 #### d. Test your query in the form to see results.
 
 ### 3. Add a new page to the app to measure distance from highlands university to a location input into the query form. The official address of NMHU is '1009 diamond, las vegas, nm'.  
 #### a. Create a new view for processing the form. You can start with a copy of the LookupView.
 #### b. Reference the form class in the new view.
 #### c. Create a new template for the view (start with a copy of lookup.html)
-#### d. In geoquery/views.py, modify the get_context_data override, implement the distance calculation and write to a new template variable.
-#### e. Modify the new template to display the distance calculation.
+#### d. In your new view in geoquery/views.py, modify the get_context_data override, implement the distance calculation and write to a new template variable.
+#### e. Add a route to the geoquery/urls.py file to your new view.
+#### f. Modify the new template to display the distance calculation.
+#### g. Test.
 
 ### Done.
