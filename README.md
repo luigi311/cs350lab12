@@ -1,18 +1,19 @@
 Lab 12: Using a Third Party App (Geopy)
 ====
 
-### Today's lab concerns how we can integrate a third party application/library in a web application.
+### Today's lab walks through how we can integrate a third party application/library in a web application.
 
 ### Topics:
 * Geopy (http://geopy.readthedocs.io/en/stable/): a python library/api for accessing and querying geographic information.
 * Django: custom (non object related) forms using `generic.FormView`
 * Django: overriding a `get_context_data` method
+* Django Forms: Using **GET** instead of **POST**
 
 
 # A. Let's Play With `geopy`
 1. Create (and activate) a virtual environment named `lab12demo_env`
 2. Install geopy: `pip install geopy`
-- geopy as a request api to many different GIS data stores. We will use the **Nominatim** data store to query for various addresses.
+- geopy provides a request api to many different GIS data stores. We will use the **Nominatim** data store to query for various addresses.
 3. Try it out in a python shell:
 
 `from geopy.geocoders import Nominatim`
