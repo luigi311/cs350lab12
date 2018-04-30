@@ -57,9 +57,13 @@ Lab 12: Using a Third Party App (Geopy)
 
 `b = geolocator.geocode(q)`
 
+**Derive a latitude, longitude tuple for each location**
+
 `aloc = (a.latitude, a.longitude)`
 
 `bloc = (b.latitude, b.longitude)`
+
+**Compute distance in miles**
 
 `d = distance(aloc, bloc).miles`
 
