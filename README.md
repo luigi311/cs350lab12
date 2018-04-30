@@ -45,13 +45,13 @@ Lab 12: Using a Third Party App (Geopy)
 
 `from geopy.distance import distance`
 
-** Location A **
+**Location A**
 
 `q = '1314 chavez st, las vegas, nm'`
 
 `a = geolocator.geocode(q)`
 
-** Location B**
+**Location B**
 
 `q = '1009 diamond, las vegas, nm'`
 
