@@ -1,4 +1,4 @@
-<!-- lookup.html -->
+<!-- lookup_dist.html -->
 {% extends "geoquery/base.html" %}
 
 {% block page_header %}Geopy Lookup (<a href="{% url 'home' %}">back home</a>){% endblock page_header %}
@@ -6,7 +6,7 @@
 {% block content %}
 <div class="row">
     <div class="col">
-        <p>Enter an address to query the Nominatim GIS db.</p>
+        <p>Enter an address to determine the distance in miles to NMHU.</p>
         <form action="." method="get"> 
             {{ form.as_p }}
             <input type="submit" value="Look it up"/>
@@ -14,8 +14,7 @@
     </div>
     <div class="col">
         {% if result %}
-            <p class='lead'>{{ result }}</p>
-            <p><b>latitude</b>: {{ result.latitude }} <b>longitude</b>: {{ result.longitude }}</p>
+            <p> <b>Miles to graceland</b>: <span class="lead">{{ result }} miles</span></p>
         {% endif %}        
     </div>
 </div>

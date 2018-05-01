@@ -16,11 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from geoquery.views import HomeView, LookupView
+from geoquery.views import HomeView, LookupView, LookupDistanceView
 
 urlpatterns = [
     url(r'^$', HomeView.as_view(), name='home'),
     url(r'^lookup/$', LookupView.as_view(), name='lookup'),
+    url(r'^lookup-dist/$', LookupDistanceView.as_view(), name='distance'),
 
     url(r'^admin/', admin.site.urls),
 ]
