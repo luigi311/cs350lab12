@@ -66,7 +66,7 @@ class LookupDistanceView(generic.FormView):
                 context['result'] = d
 
         except Exception as e:
-            print e
+            print(e)
         
         return context
 
